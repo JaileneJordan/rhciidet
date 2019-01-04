@@ -1,0 +1,24 @@
+statusedu_index:
+    path:     /
+    defaults: { _controller: "AppBundle:StatusEdu:index" }
+    methods:  GET
+
+statusedu_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:StatusEdu:show" }
+    methods:  GET
+
+statusedu_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:StatusEdu:new" }
+    methods:  [GET, POST]
+
+statusedu_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:StatusEdu:edit" }
+    methods:  [GET, POST]
+
+statusedu_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:StatusEdu:delete" }
+    methods:  DELETE

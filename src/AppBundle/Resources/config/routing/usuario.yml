@@ -1,0 +1,23 @@
+# ROUTING PARA SISTEMA DE LOGIN USUARIO
+loginUser:
+    path: /loginUser
+    defaults: { _controller: AppBundle:User:loginUser }
+#-------------------------------------------------------------#
+# ROUTING PARA INDEX DE USUARIO
+index_user:
+    path: /index_user
+    defaults: { _controller: AppBundle:User:index_user }
+#-------------------------------------------------------------#
+# ROUTING PARA PERFIL DE USUARIO
+perfil_user:
+    path: /perfil
+    defaults: { _controller: AppBundle:User:perfil_user }
+# ROUTING PARA HORARIO DE USUARIO
+horario_user:
+    path: /horario
+    defaults: { _controller: AppBundle:User:horario_user }
+# ROUTING PARA TRAMITE DE USUARIO
+tramite_user:
+    path: /tramite
+    defaults: { _controller: AppBundle:User:tramite_user }
+#-------------------------------------------------------------#
