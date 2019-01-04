@@ -1,0 +1,265 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+<!-- page content -->
+
+{% block content %}
+<div class="right_col" role="main">
+  <h1>Licencias</h1>
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <!--Empiezan Acciones Agregar-->
+      <div class="x_title">
+        <h2>Acciones</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--<h1>Licencias list</h1>
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Activo</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+          {% for licencium in licencias %}
+              <tr>
+                  <td><a href="{{ path('licencia_show', { 'id': licencium.id }) }}">{{ licencium.id }}</a></td>
+                  <td>{{ licencium.nombre }}</td>
+                  <td>{{ licencium.activo }}</td>
+                  <td>
+                      <ul>
+                          <li>
+                              <a href="{{ path('licencia_show', { 'id': licencium.id }) }}">show</a>
+                          </li>
+                          <li>
+                              <a href="{{ path('licencia_edit', { 'id': licencium.id }) }}">edit</a>
+                          </li>
+                      </ul>
+                  </td>
+              </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+
+      <ul>
+          <li>
+              <a href="{{ path('licencia_new') }}">Create a new licencium</a>
+          </li>
+      </ul>-->
+
+        <a class="btn btn-app" href="{{ path('licencia_new') }}">
+          <i class="fa fa-plus-square"></i> Agregar Licencia
+        </a>
+          <!--<div class="modal fade" id="agregarLicencia" role="dialog">
+            <div class="modal-dialog">
+              <!- Modal content->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Agregar Licencia</h4>
+                </div>
+                  <div class="modal-body">
+                    <form id="agrega_licencia" action="{{ path('licencia_new') }}" method="POST">
+
+                      <div class="form-group" >
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Licencia <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="idLicencia" name="idLicencia" required="required" class="form-control col-md-7 col-xs-12" disabled="disabled">
+                        </div>
+                      </div>
+                      </br>
+                      </br>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tipo de Licencia <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="tipoLicencia" name="tipoLicencia" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      </br>
+                      </br>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                        </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control">
+                              <option selected disabled>Elegir...</option>
+                              <option>Si</option>
+                              <option>No</option>
+                            </select>
+                          </div>
+                      </div>
+                      </br>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Agregar</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          <!-Termina Acciones Agregar->
+
+          <!-Empiezan Acciones Modificar->
+          <a class="btn btn-app" data-toggle="modal" data-target="#modificarLicencia">
+            <i class="fa fa-edit"></i> Modificar Licencia
+          </a>
+            <div class="modal fade" id="modificarLicencia" role="dialog">
+              <div class="modal-dialog">
+                <!- Modal content->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modificar Licencia</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form id="modificar_licencia" action="" method="POST">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Licencia <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="idLicencia" name="idLicencia" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <button type="button" class="btn btn-dark">Buscar</button>
+                      </div>
+                      </br>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tipo de Licencia <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="tipoLicencia" name="tipoLicencia" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      </br>
+                      </br>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                        </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control">
+                              <option selected disabled>Elegir...</option>
+                              <option>Si</option>
+                              <option>No</option>
+                            </select>
+                          </div>
+                      </div>
+                      </br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-default" data-dismiss="modal">Modificar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-Termina Acciones Modificar->
+
+            <!-Empiezan Acciones Eliminar->
+            <a class="btn btn-app" data-toggle="modal" data-target="#eliminarLicencia">
+              <i class="fa fa-close"></i> Eliminar Licencia
+            </a>
+              <div class="modal fade" id="eliminarLicencia" role="dialog">
+                <div class="modal-dialog">
+                  <!- Modal content->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Eliminar Licencia</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form id="eliminar_licencia" action="" method="POST">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Licencia <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="idLicencia" name="idLicencia" required="required" class="form-control col-md-7 col-xs-12">
+                          </div>
+                          <button type="button" class="btn btn-dark">Buscar</button>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tipo de Licencia <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="tipoLicencia" name="tipoLicencia" required="required" class="form-control col-md-7 col-xs-12" disabled="disabled">
+                          </div>
+                        </div>
+                        </br>
+                        </br>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="activoLicencia" name="activoLicencia" required="required" class="form-control col-md-7 col-xs-12" disabled="disabled">
+                          </div>
+                        </div>
+                        </br>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-default" data-dismiss="modal">Eliminar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-Termina Acciones Eliminar-->
+
+              <!--Empieza lista-->
+              <div class="x_title">
+                <h2>Lista de Licencias</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <br />
+                  <!--empieza tabla -->
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="clearfix"></div>
+                      <div class="x_content">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Id Licencia</th>
+                              <th>Tipo de Licencia</th>
+                              <th>Activo</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for licencium in licencias %}
+                              <tr>
+                                  <td><a href="{{ path('licencia_show', { 'id': licencium.id }) }}">{{ licencium.id }}</a></td>
+                                  <td>{{ licencium.nombre }}</td>
+                                  <td>{{ licencium.activo }}</td>
+                                  <td><center><a href="{{ path('licencia_edit', { 'id': licencium.id }) }}" class="btn btn-dark">Editar</a></center></td>
+                              </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+                  <!--termina tabla -->
+              </div>
+              <!--Termina Lista -->
+          </div>
+        </div>
+        <br />
+      </div>
+{% endblock %}
+<!-- /page content -->
+{% endblock %}

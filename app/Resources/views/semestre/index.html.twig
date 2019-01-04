@@ -1,0 +1,232 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+<!-- page content -->
+{% block content %}
+<div class="right_col" role="main">
+  <h1>Semestres</h1>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <br />
+        <form id="semestre">
+        <!--Empiezan Acciones Agregar-->
+        <div class="x_title">
+          <h2>Acciones</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+
+        <!--<h1>Semestres list</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Semestre</th>
+                    <th>Year</th>
+                    <th>Activo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for semestre in semestres %}
+                <tr>
+                    <td><a href="{{ path('semestre_show', { 'id': semestre.id }) }}">{{ semestre.id }}</a></td>
+                    <td>{{ semestre.semestre }}</td>
+                    <td>{{ semestre.year }}</td>
+                    <td>{{ semestre.activo }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('semestre_show', { 'id': semestre.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('semestre_edit', { 'id': semestre.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <ul>
+            <li>
+                <a href="{{ path('semestre_new') }}">Create a new semestre</a>
+            </li>
+        </ul>-->
+
+        <a class="btn btn-app"  href="{{ path('semestre_new') }}">
+          <i class="fa fa-plus-square"></i> Agregar Semestre
+        </a>
+          <!--<div class="modal fade" id="agregarSemestre" role="dialog">
+            <div class="modal-dialog">
+              <!- Modal content->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Agregar Semestre</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Semestre <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="idSemestre" name="idSemestre" required="required" class="form-control col-md-7 col-xs-12" disabled="disabled">
+                    </div>
+                  </div>
+                  </br>
+                  </br>
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="Semestre" name="Semestre" required="required" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
+                  </br>
+                  </br>
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Año <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="yearSemestre" name="yearSemestre" required="required" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
+                  </br>
+                  </br>
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                    </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control">
+                          <option selected disabled>Elegir...</option>
+                          <option>Si</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                  </div>
+                  </br>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-default" data-dismiss="modal">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-Termina Acciones Agregar-->
+
+          <!--Empiezan Acciones Modificar->
+          <a class="btn btn-app" data-toggle="modal" data-target="#modificarSemestre">
+            <i class="fa fa-edit"></i> Modificar Semestre
+          </a>
+            <div class="modal fade" id="modificarSemestre" role="dialog">
+              <div class="modal-dialog">
+                <!- Modal content->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modificar Semestre</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Semestre <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="idSemestre" name="idSemestre" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                      <button type="button" class="btn btn-dark">Buscar</button>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="Semestre" name="Semestre" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Año<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="yearSemestre" name="yearSemestre" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                      </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control">
+                            <option selected disabled>Elegir...</option>
+                            <option>Si</option>
+                            <option>No</option>
+                          </select>
+                        </div>
+                    </div>
+                    </br>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Modificar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-Termina Acciones Modificar-->
+
+              <!--Empieza lista-->
+              <div class="x_title">
+                <h2>Lista de Semestres</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <br />
+                  <!--empieza tabla -->
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="clearfix"></div>
+                      <div class="x_content">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Id Semestre</th>
+                              <th>Semestre</th>
+                              <th>Año</th>
+                              <th>Activo</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for semestre in semestres %}
+                              <tr>
+                                  <td><a href="{{ path('semestre_show', { 'id': semestre.id }) }}">{{ semestre.id }}</a></td>
+                                  <td>{{ semestre.semestre }}</td>
+                                  <td>{{ semestre.year }}</td>
+                                  <td>{{ semestre.activo }}</td>
+                                  <td><center><a href="{{ path('semestre_edit', { 'id': semestre.id }) }}" class="btn btn-dark">Editar</a></center></td>
+                              </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+                  <!--termina tabla -->
+              </div>
+              <!--Termina Lista -->
+            </form>
+          </div>
+        </div>
+      <br />
+    </div>
+{% endblock %}
+<!-- /page content -->
+{% endblock %}

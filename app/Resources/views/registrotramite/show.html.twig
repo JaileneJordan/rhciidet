@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Registrotramite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ registroTramite.id }}</td>
+            </tr>
+            <tr>
+                <th>Fecharegistro</th>
+                <td>{{ registroTramite.fechaRegistro }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('registrotramite_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('registrotramite_edit', { 'id': registroTramite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

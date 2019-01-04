@@ -1,0 +1,72 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+<!-- page content -->
+{% block content %}
+<div class="right_col" role="main">
+  <h1>Accesos</h1>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--Empieza lista-->
+              <div class="x_content">
+                <br />
+                  <!-- Tabla dinamica -->
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                         <div class="x_panel">
+                           <div class="x_title">
+                             <h2>Lista de Accesos</h2>
+                             <ul class="nav navbar-right panel_toolbox">
+                             </ul>
+                             <div class="clearfix"></div>
+                           </div>
+                           <div class="x_content">
+                             <p class="text-muted font-13 m-b-30">
+
+                             </p>
+                             <table id="datatable-buttons" class="table table-striped table-bordered">
+                               <thead>
+                                <tr>
+                                  <th>Clave Empleado</th>
+                                  <th>Nombre</th>
+                                  <th>Apellido Paterno</th>
+                                  <th>Apellido Materno</th>
+                                  <th>Tipo Usuario</th>
+                                  <th>Nombre Usuario</th>
+                                  <th>Contraseña</th>
+                                </tr>
+                              </thead>
+                                  <tbody>
+                                  {% for empleado in empleados %}
+                                      <tr>
+                                          <td>{{ empleado.claveEmpleado }}</td>
+                                          <td>{{ empleado.nombre }}</td>
+                                          <td>{{ empleado.aPaterno }}</td>
+                                          <td>{{ empleado.aMaterno }}</td>
+                                          <td>{{ empleado.idAcceso }}</td>
+                                          <td>{{ empleado.nombre }}</td>
+                                          <td>{{ empleado.password }}</td>
+                                      </tr>
+                                  {% endfor %}
+                                  </tbody>
+                            </table>
+                          </div>
+                      </div>
+                  </div>
+                  <!--termina tabla -->
+              </div>
+              <!--Termina Lista -->
+          </div>
+        </div>
+
+  <br />
+</div>
+{% endblock %}
+<!-- /page content -->
+{% endblock %}

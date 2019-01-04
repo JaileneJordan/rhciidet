@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>
+            {% block title %}
+                Sistema RH de CIIDET
+            {% endblock %}
+        </title>
+
+        <style>
+            #footer {
+                position:fixed;
+                left:0px;
+                bottom:0px;
+                height:130px;
+                width:100%;
+                background:rgb(109, 15, 7);
+              }
+            #footerletra{
+                font-size: 0.8em;
+                text-align: center;
+                color:rgb(199, 199, 199);
+            }
+            #headletra{
+                float: right;
+                text-align: center;
+                color:rgb(199, 199, 199);
+                font: small-caps 300%/200% serif;
+                padding-right: 355px;
+            }
+        </style>
+
+        {% block stylesheets %}
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('/public/img/faviconciidet2.ico') }}" />
+    </head>
+    <body>
+        <img src="/public/img/logonuevo150.png" />
+
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+    <footer>
+        <div id="footer">
+            <center><img src="/public/img/logo_footer_sep.png" />
+                <div id="footerletra">
+                    <p>Av. Universidad No. 282 Pte., Col. Centro, C.P. 76000, Querétaro, Qro.<br>
+                        Conmutador: 01 (442) 216 - 3746 y 47<br>
+                        www.ciidet.edu.mx
+                    </p>
+                </div>
+            </center>
+        </div>
+    </footer>
+</html>

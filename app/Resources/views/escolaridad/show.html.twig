@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Escolaridad</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ escolaridad.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombreplantel</th>
+                <td>{{ escolaridad.nombrePlantel }}</td>
+            </tr>
+            <tr>
+                <th>Nombretitulo</th>
+                <td>{{ escolaridad.nombreTitulo }}</td>
+            </tr>
+            <tr>
+                <th>Fechafin</th>
+                <td>{% if escolaridad.fechaFin %}{{ escolaridad.fechaFin|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Numcedula</th>
+                <td>{{ escolaridad.numCedula }}</td>
+            </tr>
+            <tr>
+                <th>Observaciones</th>
+                <td>{{ escolaridad.observaciones }}</td>
+            </tr>
+            <tr>
+                <th>Estado</th>
+                <td>{{ escolaridad.estado }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('escolaridad_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('escolaridad_edit', { 'id': escolaridad.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

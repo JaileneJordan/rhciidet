@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="headletra">
+    <spam>Sistema De Recursos Humanos CIIDET</spam>
+</div>
+<div id="container">
+    <div id="wrapper" align="center">
+        <h1>Iniciar Sesión</h1>
+        <div id="imagen">
+            <img src="/public/img/User-Lock.png" alt="">
+            <img src="/public/img/User-Lock.png" alt="">
+            <img src="/public/img/User.png" alt="">
+        </div>
+        <a href="{{ path("loginAdmin") }}"><button type="button" class="boton_personalizado boton_personalizado:hover" >Administrador</button></a>
+        <a href="{{ path( "loginAdminxDep") }}"><button type="button" class="boton_personalizado boton_personalizado:hover" >Administrador por Departamento</button></a>
+        <a href="{{ path( "loginUser") }}"><button type="button" class="boton_personalizado boton_personalizado:hover" >Usuario</button></a>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+<style>
+    body {
+        background: rgb(255, 255, 255);
+    }
+    h1, h2 {
+        padding: 3px;
+        line-height: 1.2;
+        margin: 0.5px;
+        color: rgb(109, 15, 7);
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 21px;
+        margin-bottom: 1em;
+    }
+    p {
+        margin: 0 0 1em 0;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    code {
+        background: #F5F5F5;
+        max-width: 100px;
+        padding: 1px 6px;
+        word-wrap: break-word;
+    }
+    #wrapper {
+        background: rgb(213,217,220);
+        margin-top: 0.5px auto;
+        max-width: 800px;
+        width: 50%;
+        height: 500px;
+    }
+    #container {
+        padding: 0.5%;
+        margin-bottom: 5%;
+    }
+    #imagen {
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-left: 1px;
+        right: 100px;
+        left: 126px;
+    }
+    .boton_personalizado{
+        text-decoration: none;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: rgb(109, 15, 7);
+        border-radius: 6px;
+        border: 2px solid rgb(109, 15, 7);
+        width: 180px;
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+    .boton_personalizado:hover{
+        color: rgb(109, 15, 7);
+        background-color: rgb(199, 199, 199);
+    }
+
+    @media (min-width: 768px) {
+        #wrapper { width: 95%; height: 400px; margin: 2em auto; }
+        #status a, #next a { display: block; }
+
+        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+    }
+</style>
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Registrotramites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecharegistro</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for registroTramite in registroTramites %}
+            <tr>
+                <td><a href="{{ path('registrotramite_show', { 'id': registroTramite.id }) }}">{{ registroTramite.id }}</a></td>
+                <td>{{ registroTramite.fechaRegistro }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('registrotramite_show', { 'id': registroTramite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('registrotramite_edit', { 'id': registroTramite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('registrotramite_new') }}">Create a new registroTramite</a>
+        </li>
+    </ul>
+{% endblock %}

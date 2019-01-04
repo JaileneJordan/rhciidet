@@ -1,0 +1,83 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+{% block content %}
+<div class="right_col" role="main">
+  <h1>Escolaridad</h1>
+
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+                 <div class="x_panel">
+                   <div class="x_title">
+                     <h2>Escolaridad de Empleados</h2>
+                     <ul class="nav navbar-right panel_toolbox">
+                     </ul>
+                     <div class="clearfix"></div>
+                   </div>
+                   <div class="x_content">
+                     <p class="text-muted font-13 m-b-30">
+
+                     </p>
+                     <table id="datatable-buttons" class="table table-striped table-bordered">
+                      <thead>
+                          <tr>
+                              <th>Clave</th>
+                              <th>Nombre</th>
+                              <th>Departamento</th>
+                              <th>Subdirección</th>
+                              <th>Clave Presupuestal</th>
+                              <th>Nivel Educativo</th>
+                              <th>Grado</th>
+                              <th>Documentación Oficial</th>
+                              <th>Nombre Título</th>
+                              <th>Nombre Plantel</th>
+                              <th>Estado</th>
+                              <th>Fecha Titulación</th>
+                              <th>Num. Cédula</th>
+                              <th>Observaciones</th>
+                              <th>Acciones</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      {% for escolaridad in result %}
+                          <tr>
+                              <td>{{ escolaridad.claveEmpleado }}</td>
+                              <td>{{ escolaridad.nombre }}</td>
+                              <td>{{ escolaridad.nombreDep }}</td>
+                              <td>{{ escolaridad.nombreSubd }}</td>
+                              <td>{{ escolaridad.clavePresupuestal }}</td>
+                              <td>{{ escolaridad.nombreNe }}</td>
+                              <td>{{ escolaridad.nombreSe }}</td>
+                              <td>{{ escolaridad.nombreDoc }}</td>
+                              <td>{{ escolaridad.nombreTitulo }}</td>
+                              <td>{{ escolaridad.nombrePlantel }}</td>
+                              <td>{{ escolaridad.estado }}</td>
+                              <td>{% if escolaridad.fechaFin %}{{ escolaridad.fechaFin|date('Y-m-d') }}{% endif %}</td>
+                              <td>{{ escolaridad.numCedula }}</td>
+                              <td>{{ escolaridad.observaciones }}</td>
+                              <td><a href="{{ path('escolaridad_edit', { 'id': escolaridad.id }) }}"><input type="button" name="editarEsc" value="Editar" class="btn btn-dark"/></a></td>
+                          </tr>
+                      {% endfor %}
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+  <!-- Final de tabla dinamica -->
+        </div>
+      </div>
+    </div>
+  </br>
+  </div>
+  {% endblock %}
+{% endblock %}

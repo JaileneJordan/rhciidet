@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Docsoficiale</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ docsOficiale.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ docsOficiale.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Activo</th>
+                <td>{{ docsOficiale.activo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('docsoficiales_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('docsoficiales_edit', { 'id': docsOficiale.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

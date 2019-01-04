@@ -1,0 +1,261 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+<!-- page content -->
+{% block content %}
+<div class="right_col" role="main">
+  <h1>Trámites</h1>
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+
+      <!--<h1>Tramites list</h1>
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Activo</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+          {% for tramite in tramites %}
+              <tr>
+                  <td><a href="{{ path('tramite_show', { 'id': tramite.id }) }}">{{ tramite.id }}</a></td>
+                  <td>{{ tramite.nombre }}</td>
+                  <td>{{ tramite.activo }}</td>
+                  <td>
+                      <ul>
+                          <li>
+                              <a href="{{ path('tramite_show', { 'id': tramite.id }) }}">show</a>
+                          </li>
+                          <li>
+                              <a href="{{ path('tramite_edit', { 'id': tramite.id }) }}">edit</a>
+                          </li>
+                      </ul>
+                  </td>
+              </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+
+      <ul>
+          <li>
+              <a href="{{ path('tramite_new') }}">Create a new tramite</a>
+          </li>
+      </ul>-->
+
+      <div class="x_content">
+        <div class="" role="tabpanel" data-example-id="togglable-tabs">
+          <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#acciones" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Acciones</a>
+            </li>
+            <li role="presentation" class=""><a href="#peticionTramites" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Peticion de Trámites</a>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="acciones" aria-labelledby="home-tab">
+              <form id="tramite">
+                <a class="btn btn-app" href="{{ path('tramite_new') }}">
+                  <i class="fa fa-plus-square"></i> Agregar Trámite
+                </a>
+                  <!--<div class="modal fade" id="agregarTramite" role="dialog">
+                    <div class="modal-dialog">
+                      <!- Modal content->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Agregar Trámite</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Trámite <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <input type="text" id="idTramite" name="idTramite" required="required" class="form-control col-md-7 col-xs-12" disabled="disabled">
+                            </div>
+                          </div>
+                          </br>
+                          </br>
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre del Trámite <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <input type="text" id="nombreTramite" name="nombreTramite" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+                          </br>
+                          </br>
+                          <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                            </label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="form-control">
+                                  <option selected disabled>Elegir...</option>
+                                  <option>Si</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                          </div>
+                          </br>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-default" data-dismiss="modal">Agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-Termina Acciones Agregar-->
+
+                  <!--Empiezan Acciones Modificar->
+                  <a class="btn btn-app" data-toggle="modal" data-target="#modificarTramite">
+                    <i class="fa fa-edit"></i> Modificar Trámite
+                  </a>
+                    <div class="modal fade" id="modificarTramite" role="dialog">
+                      <div class="modal-dialog">
+                        <!- Modal content->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modificar Trámite</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id Trámite <span class="required">*</span>
+                              </label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="idTramite" name="idTramite" required="required" class="form-control col-md-7 col-xs-12">
+                              </div>
+                              <button type="button" class="btn btn-dark">Buscar</button>
+                            </div>
+                            </br>
+                            <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre del Trámite <span class="required">*</span>
+                              </label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="nombreTramite" name="nombreTramite" required="required" class="form-control col-md-7 col-xs-12">
+                              </div>
+                            </div>
+                            </br>
+                            </br>
+                            <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-3" for="last-name">Activo <span class="required">*</span>
+                              </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                  <select class="form-control">
+                                    <option selected disabled>Elegir...</option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                  </select>
+                                </div>
+                            </div>
+                            </br>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-default" data-dismiss="modal">Modificar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-Termina Acciones Modificar-->
+
+                      <!--Empieza lista-->
+                      <div class="x_title">
+                        <h2>Lista de Trámites</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                        </ul>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="x_content">
+                        <br />
+                          <!--empieza tabla -->
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="clearfix"></div>
+                              <div class="x_content">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Id Trámite</th>
+                                      <th>Nombre del Trámite</th>
+                                      <th>Activo</th>
+                                      <th>Acciones</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                  {% for tramite in tramites %}
+                                      <tr>
+                                          <td><a href="{{ path('tramite_show', { 'id': tramite.id }) }}">{{ tramite.id }}</a></td>
+                                          <td>{{ tramite.nombre }}</td>
+                                          <td>{{ tramite.activo }}</td>
+                                          <td><center><a href="{{ path('tramite_edit', { 'id': tramite.id }) }}" class="btn btn-dark">Editar</a></center></td>
+                                      </tr>
+                                  {% endfor %}
+                                  </tbody>
+                                </table>
+                              </div>
+                          </div>
+                          <!--termina tabla -->
+                      </div>
+                      <!--Termina Lista -->
+                    </form>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="peticionTramites" aria-labelledby="profile-tab">
+                    <h4>Lista de los trámites que han solicitado los empleados.</h4>
+                    <!--empieza tabla -->
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="clearfix"></div>
+                        <div class="x_content">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Subdirección</th>
+                                <th>Departamento</th>
+                                <th>Puesto</th>
+                                <th>Id Trámite</th>
+                                <th>Nombre del Trámite</th>
+                                <th>Fecha</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                    <!--termina tabla -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+{% endblock %}
+<!-- /page content -->
+{% endblock %}

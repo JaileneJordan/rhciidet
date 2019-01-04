@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Horario</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ horario.id }}</td>
+            </tr>
+            <tr>
+                <th>Lunm</th>
+                <td>{% if horario.lunm %}{{ horario.lunm|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Marm</th>
+                <td>{% if horario.marm %}{{ horario.marm|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Mierm</th>
+                <td>{% if horario.mierm %}{{ horario.mierm|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Juem</th>
+                <td>{% if horario.juem %}{{ horario.juem|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Vierm</th>
+                <td>{% if horario.vierm %}{{ horario.vierm|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Lunv</th>
+                <td>{% if horario.lunv %}{{ horario.lunv|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Marv</th>
+                <td>{% if horario.marv %}{{ horario.marv|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Mierv</th>
+                <td>{% if horario.mierv %}{{ horario.mierv|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Juev</th>
+                <td>{% if horario.juev %}{{ horario.juev|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Vierv</th>
+                <td>{% if horario.vierv %}{{ horario.vierv|date('H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('horario_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('horario_edit', { 'id': horario.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
