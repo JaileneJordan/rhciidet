@@ -1,0 +1,94 @@
+# DIRECCIÓN ROUTING PARA HOME
+app_homepage:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN
+app_login:
+    resource: '@AppBundle/Resources/config/routing/admin.yml'
+    prefix:   /
+
+# DIRECCIÓN ROUTING PARA LOGIN USUARIO
+app_login_user:
+    resource: '@AppBundle/Resources/config/routing/usuario.yml'
+    prefix:   /
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_login_adminxdep:
+    resource: '@AppBundle/Resources/config/routing/adminxdep.yml'
+    prefix:   /
+
+# DIRECCIÓN ROUTING PARA AUSENCIA
+app_ausencia:
+    resource: "@AppBundle/Resources/config/routing/ausencia.yml"
+    prefix:   /ausencia
+
+# DIRECCIÓN ROUTING PARA CATEGORIA
+app_categoria:
+    resource: "@AppBundle/Resources/config/routing/categoria.yml"
+    prefix:   /categoria
+
+# DIRECCIÓN ROUTING PARA DEPARTAMENTO
+app_departamento:
+    resource: "@AppBundle/Resources/config/routing/departamento.yml"
+    prefix:   /departamento
+
+# DIRECCIÓN ROUTING DOCUMENTOS OFICIALES
+app_docsoficiales:
+    resource: "@AppBundle/Resources/config/routing/docsoficiales.yml"
+    prefix:   /docsoficiales
+
+# DIRECCIÓN ROUTING PARA EMPLEADO
+app_empleado:
+    resource: "@AppBundle/Resources/config/routing/empleado.yml"
+    prefix:   /empleado
+
+# DIRECCIÓN ROUTING PARA ESCOLARIDAD
+app_escolaridad:
+    resource: "@AppBundle/Resources/config/routing/escolaridad.yml"
+    prefix:   /escolaridad
+
+# DIRECCIÓN ROUTING PARA HORARIO
+app_horario:
+    resource: "@AppBundle/Resources/config/routing/horario.yml"
+    prefix:   /horario
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_licencia:
+    resource: "@AppBundle/Resources/config/routing/licencia.yml"
+    prefix:   /licencia
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_niveledu:
+    resource: "@AppBundle/Resources/config/routing/niveledu.yml"
+    prefix:   /niveledu
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_puesto:
+    resource: "@AppBundle/Resources/config/routing/puesto.yml"
+    prefix:   /puesto
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_registrotramite:
+    resource: "@AppBundle/Resources/config/routing/registrotramite.yml"
+    prefix:   /registrotramite
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_semestre:
+    resource: "@AppBundle/Resources/config/routing/semestre.yml"
+    prefix:   /semestre
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_statusedu:
+    resource: "@AppBundle/Resources/config/routing/statusedu.yml"
+    prefix:   /statusedu
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_subdireccion:
+    resource: "@AppBundle/Resources/config/routing/subdireccion.yml"
+    prefix:   /subdireccion
+
+# DIRECCIÓN ROUTING PARA LOGIN ADMIN X DEPARTAMENTO
+app_tramite:
+        resource: "@AppBundle/Resources/config/routing/tramite.yml"
+        prefix:   /tramite
