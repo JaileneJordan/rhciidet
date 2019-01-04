@@ -1,0 +1,82 @@
+AppBundle\Entity\Horario:
+    type: entity
+    table: horario
+    indexes:
+        id_semestre:
+            columns:
+                - id_semestre
+        id_empleado:
+            columns:
+                - id_empleado
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        lunm:
+            type: time
+            nullable: false
+            column: LunM
+        marm:
+            type: time
+            nullable: false
+            column: MarM
+        mierm:
+            type: time
+            nullable: false
+            column: MierM
+        juem:
+            type: time
+            nullable: false
+            column: JueM
+        vierm:
+            type: time
+            nullable: false
+            column: VierM
+        lunv:
+            type: time
+            nullable: false
+            column: LunV
+        marv:
+            type: time
+            nullable: false
+            column: MarV
+        mierv:
+            type: time
+            nullable: false
+            column: MierV
+        juev:
+            type: time
+            nullable: false
+            column: JueV
+        vierv:
+            type: time
+            nullable: false
+            column: VierV
+    manyToOne:
+        idSemestre:
+            targetEntity: Semestre
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_semestre:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idEmpleado:
+            targetEntity: Empleado
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_empleado:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

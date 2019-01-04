@@ -1,0 +1,24 @@
+niveledu_index:
+    path:     /
+    defaults: { _controller: "AppBundle:NivelEdu:index" }
+    methods:  GET
+
+niveledu_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:NivelEdu:show" }
+    methods:  GET
+
+niveledu_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:NivelEdu:new" }
+    methods:  [GET, POST]
+
+niveledu_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:NivelEdu:edit" }
+    methods:  [GET, POST]
+
+niveledu_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:NivelEdu:delete" }
+    methods:  DELETE

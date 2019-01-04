@@ -1,0 +1,24 @@
+ausencia_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Ausencia:index" }
+    methods:  GET
+
+ausencia_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Ausencia:show" }
+    methods:  GET
+
+ausencia_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Ausencia:new" }
+    methods:  [GET, POST]
+
+ausencia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Ausencia:edit" }
+    methods:  [GET, POST]
+
+ausencia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Ausencia:delete" }
+    methods:  DELETE

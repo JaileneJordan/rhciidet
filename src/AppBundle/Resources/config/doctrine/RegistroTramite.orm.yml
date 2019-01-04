@@ -1,0 +1,48 @@
+AppBundle\Entity\RegistroTramite:
+    type: entity
+    table: registro_tramite
+    indexes:
+        id_empleado:
+            columns:
+                - id_empleado
+        id_tramite:
+            columns:
+                - id_tramite
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fechaRegistro:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: fecha_registro
+    manyToOne:
+        idEmpleado:
+            targetEntity: Empleado
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_empleado:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idTramite:
+            targetEntity: Tramite
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_tramite:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

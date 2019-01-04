@@ -1,0 +1,105 @@
+AppBundle\Entity\Escolaridad:
+    type: entity
+    table: escolaridad
+    indexes:
+        id_docsofi:
+            columns:
+                - id_docsofi
+        id_niveledu:
+            columns:
+                - id_niveledu
+        id_statusedu:
+            columns:
+                - id_statusedu
+        id_empleado:
+            columns:
+                - id_empleado
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombrePlantel:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: nombre_plantel
+        nombreTitulo:
+            type: string
+            nullable: false
+            length: 70
+            options:
+                fixed: false
+            column: nombre_titulo
+        fechaFin:
+            type: date
+            nullable: false
+            column: fecha_fin
+        numCedula:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: num_cedula
+        observaciones:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        estado:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+    manyToOne:
+        idDocsofi:
+            targetEntity: DocsOficiales
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_docsofi:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idNiveledu:
+            targetEntity: NivelEdu
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_niveledu:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idStatusedu:
+            targetEntity: StatusEdu
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_statusedu:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idEmpleado:
+            targetEntity: Empleado
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_empleado:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

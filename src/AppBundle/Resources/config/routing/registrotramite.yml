@@ -1,0 +1,24 @@
+registrotramite_index:
+    path:     /
+    defaults: { _controller: "AppBundle:RegistroTramite:index" }
+    methods:  GET
+
+registrotramite_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:RegistroTramite:show" }
+    methods:  GET
+
+registrotramite_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:RegistroTramite:new" }
+    methods:  [GET, POST]
+
+registrotramite_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:RegistroTramite:edit" }
+    methods:  [GET, POST]
+
+registrotramite_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:RegistroTramite:delete" }
+    methods:  DELETE

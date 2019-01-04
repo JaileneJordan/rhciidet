@@ -1,0 +1,27 @@
+AppBundle\Entity\NivelEdu:
+    type: entity
+    table: nivel_edu
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombreNe:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: nombre_ne
+        activo:
+            type: string
+            nullable: false
+            length: 2
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

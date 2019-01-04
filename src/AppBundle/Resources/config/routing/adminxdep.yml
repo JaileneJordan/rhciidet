@@ -1,0 +1,27 @@
+# ROUTING PARA SISTEMA DE LOGIN ADMINISTRADOR
+loginAdminxDep:
+    path: /loginAdminxDep
+    defaults: { _controller: AppBundle:AdminxDep:loginAdminxDep }
+#-------------------------------------------------------------#
+# ROUTING PARA INDEX DE ADMIN
+indexAdminxdep:
+    path: /indexAdminxdep
+    defaults: { _controller: AppBundle:AdminxDep:indexAdminxdep }
+#-------------------------------------------------------------#
+# ROUTING PARA PERFIL DE ADMIN X DEPARTAMENTO
+perfil:
+    path: /perfil
+    defaults: { _controller: AppBundle:AdminxDep:perfil }
+# ROUTING PARA HORARIO DE ADMIN X DEPARTAMENTO
+horario:
+    path: /horario
+    defaults: { _controller: AppBundle:AdminxDep:horario }
+# ROUTING PARA TRAMITE DE ADMIN X DEPARTAMENTO
+tramite:
+    path: /tramite
+    defaults: { _controller: AppBundle:AdminxDep:tramite }
+# ROUTING PARA CARGA HORARIO DE EMPLEADOS DE ADMIN X DEPARTAMENTO
+carga_horario:
+    path: /carga_horario
+    defaults: { _controller: AppBundle:AdminxDep:cargaHorario }
+#-------------------------------------------------------------#

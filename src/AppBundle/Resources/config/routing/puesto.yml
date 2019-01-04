@@ -1,0 +1,24 @@
+puesto_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Puesto:index" }
+    methods:  GET
+
+puesto_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Puesto:show" }
+    methods:  GET
+
+puesto_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Puesto:new" }
+    methods:  [GET, POST]
+
+puesto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Puesto:edit" }
+    methods:  [GET, POST]
+
+puesto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Puesto:delete" }
+    methods:  DELETE

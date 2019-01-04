@@ -1,0 +1,250 @@
+AppBundle\Entity\Empleado:
+    type: entity
+    table: empleado
+    indexes:
+        id_acceso:
+            columns:
+                - id_acceso
+        id_depto:
+            columns:
+                - id_depto
+        id_categoria:
+            columns:
+                - id_categoria
+        id_puesto:
+            columns:
+                - id_puesto
+        id_subdireccion:
+            columns:
+                - id_subdireccion
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        claveEmpleado:
+            type: string
+            nullable: false
+            length: 5
+            options:
+                fixed: false
+            column: clave_empleado
+        nombre:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        aPaterno:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: a_paterno
+        aMaterno:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: a_materno
+        rfc:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        curp:
+            type: string
+            nullable: false
+            length: 18
+            options:
+                fixed: false
+        nss:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: NSS
+        ley:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        calle:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        numExt:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: num_ext
+        colonia:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        cp:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: CP
+        municipio:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        estado:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        telefono:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        correo:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        edoCivil:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: edo_civil
+        fechaNacimiento:
+            type: date
+            nullable: false
+            column: fecha_nacimiento
+        lugarNacimiento:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: lugar_nacimiento
+        genero:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        fechaIniGobSep:
+            type: date
+            nullable: false
+            column: fecha_ini_gob_sep
+        fechaIniSep:
+            type: date
+            nullable: false
+            column: fecha_ini_sep
+        fechaIniTec:
+            type: date
+            nullable: false
+            column: fecha_ini_tec
+        fechaIniCiidet:
+            type: date
+            nullable: false
+            column: fecha_ini_ciidet
+        clavePresupuestal:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: clave_presupuestal
+        password:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+        interinato:
+            type: string
+            nullable: false
+            length: 2
+            options:
+                fixed: false
+        activo:
+            type: string
+            nullable: false
+            length: 2
+            options:
+                fixed: false
+        plaza:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+    manyToOne:
+        idAcceso:
+            targetEntity: Acceso
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_acceso:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idDepto:
+            targetEntity: Departamento
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_depto:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idCategoria:
+            targetEntity: Categoria
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_categoria:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idPuesto:
+            targetEntity: Puesto
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_puesto:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSubdireccion:
+            targetEntity: Subdireccion
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_subdireccion:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

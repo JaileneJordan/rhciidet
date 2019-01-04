@@ -1,0 +1,24 @@
+semestre_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Semestre:index" }
+    methods:  GET
+
+semestre_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Semestre:show" }
+    methods:  GET
+
+semestre_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Semestre:new" }
+    methods:  [GET, POST]
+
+semestre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Semestre:edit" }
+    methods:  [GET, POST]
+
+semestre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Semestre:delete" }
+    methods:  DELETE

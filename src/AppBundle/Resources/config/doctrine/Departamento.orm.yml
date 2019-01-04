@@ -1,0 +1,42 @@
+AppBundle\Entity\Departamento:
+    type: entity
+    table: departamento
+    indexes:
+        id_subdireccion:
+            columns:
+                - id_subdireccion
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombreDep:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: nombre_dep
+        jefe:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+    manyToOne:
+        idSubdireccion:
+            targetEntity: Subdireccion
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_subdireccion:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

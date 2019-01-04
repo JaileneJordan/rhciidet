@@ -1,0 +1,78 @@
+AppBundle\Entity\Ausencia:
+    type: entity
+    table: ausencia
+    indexes:
+        id_licencia:
+            columns:
+                - id_licencia
+        id_empleado:
+            columns:
+                - id_empleado
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        constancia:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        fechaInicial:
+            type: date
+            nullable: false
+            column: fecha_inicial
+        fechaFinal:
+            type: date
+            nullable: false
+            column: fecha_final
+        totalDias:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: total_dias
+        fechagobfed:
+            type: date
+            nullable: false
+            column: FechaGobFed
+        fechasep:
+            type: date
+            nullable: false
+            column: FechaSep
+        fechatec:
+            type: date
+            nullable: false
+            column: FechaTec
+        fechaciidet:
+            type: date
+            nullable: false
+            column: FechaCiidet
+    manyToOne:
+        idLicencia:
+            targetEntity: Licencia
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_licencia:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idEmpleado:
+            targetEntity: Empleado
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_empleado:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

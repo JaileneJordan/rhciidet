@@ -1,0 +1,27 @@
+AppBundle\Entity\StatusEdu:
+    type: entity
+    table: status_edu
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombreSe:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: nombre_se
+        activo:
+            type: string
+            nullable: false
+            length: 2
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
