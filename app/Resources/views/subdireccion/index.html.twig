@@ -233,7 +233,7 @@
                           {% for subdireccion in subdireccions %}
                               <tr>
                                   <td><a href="{{ path('subdireccion_show', { 'id': subdireccion.id }) }}">{{ subdireccion.id }}</a></td>
-                                  <td>{{ subdireccion.nombre }}</td>
+                                  <td>{{ subdireccion.nombreSubd }}</td>
                                   <td>{{ subdireccion.subdirector }}</td>
                                   <td>
                                     <center><a href="{{ path('subdireccion_edit', { 'id': subdireccion.id }) }}" class="btn btn-dark">Editar</a></center>

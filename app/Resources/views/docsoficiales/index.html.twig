@@ -190,7 +190,7 @@
                             {% for docsOficiale in docsOficiales %}
                                 <tr>
                                     <td><a href="{{ path('docsoficiales_show', { 'id': docsOficiale.id }) }}">{{ docsOficiale.id }}</a></td>
-                                    <td>{{ docsOficiale.nombre }}</td>
+                                    <td>{{ docsOficiale.nombreDoc }}</td>
                                     <td>{{ docsOficiale.activo }}</td>
                                     <td><center><a href="{{ path('docsoficiales_edit', { 'id': docsOficiale.id }) }}" class="btn btn-dark">Editar</a></center></td>
                                 </tr>

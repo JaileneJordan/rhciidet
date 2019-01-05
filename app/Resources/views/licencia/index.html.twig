@@ -244,7 +244,7 @@
                           {% for licencium in licencias %}
                               <tr>
                                   <td><a href="{{ path('licencia_show', { 'id': licencium.id }) }}">{{ licencium.id }}</a></td>
-                                  <td>{{ licencium.nombre }}</td>
+                                  <td>{{ licencium.nombreLic }}</td>
                                   <td>{{ licencium.activo }}</td>
                                   <td><center><a href="{{ path('licencia_edit', { 'id': licencium.id }) }}" class="btn btn-dark">Editar</a></center></td>
                               </tr>

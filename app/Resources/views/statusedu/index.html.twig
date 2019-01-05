@@ -188,7 +188,7 @@
                             {% for statusEdu in statusEdus %}
                                 <tr>
                                     <td><a href="{{ path('statusedu_show', { 'id': statusEdu.id }) }}">{{ statusEdu.id }}</a></td>
-                                    <td>{{ statusEdu.nombre }}</td>
+                                    <td>{{ statusEdu.nombreSe }}</td>
                                     <td>{{ statusEdu.activo }}</td>
                                     <td><center><a href="{{ path('statusedu_edit', { 'id': statusEdu.id }) }}" class="btn btn-dark">Editar</a></center></td>
                                 </tr>

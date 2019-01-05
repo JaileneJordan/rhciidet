@@ -188,7 +188,7 @@
                             {% for nivelEdu in nivelEdus %}
                                 <tr>
                                     <td><a href="{{ path('niveledu_show', { 'id': nivelEdu.id }) }}">{{ nivelEdu.id }}</a></td>
-                                    <td>{{ nivelEdu.nombre }}</td>
+                                    <td>{{ nivelEdu.nombreNe }}</td>
                                     <td>{{ nivelEdu.activo }}</td>
                                     <td><center><a href="{{ path('niveledu_edit', { 'id': nivelEdu.id }) }}" class="btn btn-dark">Editar</a></center></td>
                                 </tr>
