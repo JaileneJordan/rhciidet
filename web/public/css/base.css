@@ -1,0 +1,22 @@
+<style>
+  #footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:130px;
+    width:100%;
+    background:rgb(109, 15, 7);
+  }
+  #footerletra{
+    font-size: 0.8em;
+    text-align: center;
+    color:rgb(199, 199, 199);
+  }
+  #headletra{
+    float: right;
+    text-align: center;
+    color:rgb(199, 199, 199);
+    font: small-caps 300%/200% serif;
+    padding-right: 355px;
+  }
+</style>
