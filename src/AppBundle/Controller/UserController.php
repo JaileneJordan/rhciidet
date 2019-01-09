@@ -13,8 +13,22 @@ use Symfony\Component\HttpFoundation\Request;
 class UserController extends Controller
 {
     public function loginUSerAction(Request $request){
-      // indicamos la vista al loginUser
-      return $this->render('user/loginUser.html.twig');
+      /* si existe el objeto User nos rediriges a home            */
+      if( is_object($this->getUser()) ){
+        return $this->redirect('index_user');
+      }
+      //Llamamos al servicio de autenticacion
+      $authenticationUtils = $this->get('security.authentication_utils');
+      // conseguir el error del login si falla
+      $error = $authenticationUtils->getLastAuthenticationError();
+      // ultimo nombre de usuario que se ha intentado identificar
+      $lastUsername = $authenticationUtils->getLastUsername();
+      return $this->render(
+              'user/loginUser.html.twig', array(
+                  'last_username' => $lastUsername,
+                  'error' => $error,
+              ));
+
     }
 
     public function index_userAction(Request $request){

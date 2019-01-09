@@ -1034,7 +1034,7 @@ class Empleado implements UserInterface, \Serializable
 
     public function getRoles()
    {
-       return array('ROLE_ADMIN');
+       return array('ROLE_USER','ROLE_ADMIN');
    }
 
    public function eraseCredentials()
@@ -1046,7 +1046,7 @@ class Empleado implements UserInterface, \Serializable
    {
        return serialize(array(
            $this->id,
-           $this->username,
+           $this->nombre,
            $this->password,
            // see section on salt below
            // $this->salt,
@@ -1058,7 +1058,7 @@ class Empleado implements UserInterface, \Serializable
    {
        list (
            $this->id,
-           $this->username,
+           $this->nombre,
            $this->password,
            // see section on salt below
            // $this->salt

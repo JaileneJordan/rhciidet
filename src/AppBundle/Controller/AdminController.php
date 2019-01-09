@@ -18,16 +18,28 @@ use Symfony\Component\HttpFoundation\Response;        // Permite usar el método
 class AdminController extends Controller
 {
 
+  /* OBJETO SESSIÓN
+   * Para activar las sesiones inicializamos la variable e incluimos
+   * en ella el objeto Session()
+   * No olvidar dar acceso al componenete de Symfony
+   * Session() permitirá usar los mensajes FLASHBAG
+   */
+      private $session;
+      public function __construct(){
+        $this->session = new Session();
+      }
+
   public function loginAdminAction(Request $request){
+    /* si existe el objeto User nos rediriges a home            */
+    if( is_object($this->getUser()) ){
+      return $this->redirect('index');
+    }
     //Llamamos al servicio de autenticacion
     $authenticationUtils = $this->get('security.authentication_utils');
-
     // conseguir el error del login si falla
     $error = $authenticationUtils->getLastAuthenticationError();
-
     // ultimo nombre de usuario que se ha intentado identificar
     $lastUsername = $authenticationUtils->getLastUsername();
-
     return $this->render(
             'admin/loginAdmin.html.twig', array(
                 'last_username' => $lastUsername,
