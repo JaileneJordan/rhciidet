@@ -14,16 +14,11 @@
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
         <p id="profile-name" class="profile-name-card"></p>
 
-        {% if errors is defined %}
-          <div class="alert alert-danger">
-            {{ error.messageKey }}
-          </div>
+        {% if is_granted ('ROLE_USER') %}
+            {{ dump(app.user) }}
         {% endif %}
-
-        {% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
-
-          {{app.user.nombre}} {{app.user.aPaterno}}  {{ app.user.idAcceso }}
-
+        {% if last_username is defined %}
+            {{ last_username }}
         {% endif %}
 
 

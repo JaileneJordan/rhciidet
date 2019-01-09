@@ -5,6 +5,7 @@ security:
     encoders:
         AppBundle\Entity\Empleado:
             algorithm: bcrypt
+            cost: 4 # Número de veces que se va a encriptar la contraseña
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
@@ -40,3 +41,34 @@ security:
 
 
             provider: our_db_provider
+
+    access_control:
+        # ^/login puede entrar cualquier usuario (ANÓNIMO)
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - { path: ^/loginAdmin, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - { path: ^/loginAdminxDep, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - { path: ^/loginUser, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        # ^/ puede entrar los usuarios con ROLE_ADMIN
+        - { path: ^/index, roles: [ROLE_ADMIN]}
+        - { path: ^/perfil_admin, roles: [ROLE_ADMIN]}
+        - { path: ^/empleado, roles: [ROLE_ADMIN]}
+        - { path: ^/escolaridad, roles: [ROLE_ADMIN]}
+        - { path: ^/acceso, roles: [ROLE_ADMIN]}
+        - { path: ^/ausencia, roles: [ROLE_ADMIN]}
+        - { path: ^/antiguedad, roles: [ROLE_ADMIN]}
+        - { path: ^/subdireccion, roles: [ROLE_ADMIN]}
+        - { path: ^/departamento, roles: [ROLE_ADMIN]}
+        - { path: ^/licencia, roles: [ROLE_ADMIN]}
+        - { path: ^/puesto, roles: [ROLE_ADMIN]}
+        - { path: ^/semestre, roles: [ROLE_ADMIN]}
+        - { path: ^/categoria, roles: [ROLE_ADMIN]}
+        - { path: ^/docsoficiales, roles: [ROLE_ADMIN]}
+        - { path: ^/niveledu, roles: [ROLE_ADMIN]}
+        - { path: ^/statusedu, roles: [ROLE_ADMIN]}
+        - { path: ^/tramite, roles: [ROLE_ADMIN]}
+        # ^/ puede entrar los usuarios con ROLE_USER
+        - { path: ^/indexAdminxdep, roles: ROLE_USER}
+        - { path: ^/perfil, roles: [ROLE_USER]}
+        - { path: ^/horario, roles: [ROLE_USER]}
+        - { path: ^/tramite, roles: [ROLE_USER]}
+        - { path: ^/index_user, roles: [ROLE_USER]}

@@ -11,17 +11,31 @@
     <div class="card card-container">
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
         <p id="profile-name" class="profile-name-card"></p>
-        <form class="form-signin">
-            <span id="reauth-email" class="reauth-email"></span>
-            <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-            <div id="remember" class="checkbox">
-                <label>
-                    <input type="checkbox" value="remember-me"> Recordar
-                </label>
-            </div>
-            <a href="{{ path("index_user") }}"><button class="btn btn-lg btn-primary btn-block btn-signin" type="button">Iniciar Sesión</button></a>
-        </form><!-- /form -->
+
+        {% if is_granted ('ROLE_USER') %}
+            {{ dump(app.user) }}
+        {% endif %}
+        {% if last_username is defined %}
+            {{ last_username }}
+        {% endif %}
+
+
+        <form action="{{ path('login_check') }}" method="post" class="form-signin">
+
+            <input type="text" id="username" name="_username"  value="{{ last_username }}" class="form-control" placeholder="Usuario" required autofocus/>
+
+
+            <input type="password" id="password" name="_password" class="form-control" placeholder="Contraseña" required/>
+
+            {#
+            Si quieres controlar la url a la que el usuario
+            es redirigido al enviar correctamente el formulario
+            <input type="hidden" name="_target_path" value="/index" />
+            #}
+
+            <input type="hidden" name="_target_path" value="/index_user" />
+            <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit" value="Iniciar Sesión" />
+        </form>
         <a href="#" class="forgot-password">
             ¿Olvidó la contraseña?
         </a>
