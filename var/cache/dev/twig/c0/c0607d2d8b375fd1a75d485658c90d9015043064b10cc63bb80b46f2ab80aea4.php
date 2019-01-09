@@ -76,20 +76,47 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
     <div class=\"card card-container\">
         <img id=\"profile-img\" class=\"profile-img-card\" src=\"//ssl.gstatic.com/accounts/ui/avatar_2x.png\" />
         <p id=\"profile-name\" class=\"profile-name-card\"></p>
-        <form class=\"form-signin\">
-            <span id=\"reauth-email\" class=\"reauth-email\"></span>
-            <input type=\"text\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Usuario\" required autofocus>
-            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Contraseña\" required>
-            <div id=\"remember\" class=\"checkbox\">
-                <label>
-                    <input type=\"checkbox\" value=\"remember-me\"> Recordar
-                </label>
-            </div>
-            <a href=\"";
+
+        ";
+        // line 15
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
+            // line 16
+            echo "            ";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, $this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()));
+            echo "
+        ";
+        }
+        // line 18
+        echo "        ";
+        if ((isset($context["last_username"]) || array_key_exists("last_username", $context))) {
+            // line 19
+            echo "            ";
+            echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
+            echo "
+        ";
+        }
+        // line 21
+        echo "
+
+        <form action=\"";
         // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("index_user");
-        echo "\"><button class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"button\">Iniciar Sesión</button></a>
-        </form><!-- /form -->
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("login_check");
+        echo "\" method=\"post\" class=\"form-signin\">
+
+            <input type=\"text\" id=\"username\" name=\"_username\"  value=\"";
+        // line 25
+        echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
+        echo "\" class=\"form-control\" placeholder=\"Usuario\" required autofocus/>
+
+
+            <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required/>
+
+            ";
+        // line 35
+        echo "
+            <input type=\"hidden\" name=\"_target_path\" value=\"/index_user\" />
+            <input class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"submit\" value=\"Iniciar Sesión\" />
+        </form>
         <a href=\"#\" class=\"forgot-password\">
             ¿Olvidó la contraseña?
         </a>
@@ -105,7 +132,7 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
 
     }
 
-    // line 33
+    // line 47
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -114,12 +141,12 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 34
+        // line 48
         echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendors/bootstrap/dist/css/bootstrap.min.css"), "html", null, true);
         echo "\" type=\"text/css\" />
 <link href=\"";
-        // line 35
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" id=\"bootstrap-css\"/>
 <style>
@@ -258,7 +285,7 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
 
     }
 
-    // line 165
+    // line 179
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -267,12 +294,12 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 166
+        // line 180
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 167
+        // line 181
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//code.jquery.com/jquery-1.11.1.min.js"), "html", null, true);
         echo "\"></script>
 <script>
@@ -379,7 +406,7 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
 
     public function getDebugInfo()
     {
-        return array (  276 => 167,  271 => 166,  262 => 165,  123 => 35,  118 => 34,  109 => 33,  90 => 23,  72 => 7,  63 => 6,  52 => 3,  43 => 2,  11 => 1,);
+        return array (  303 => 181,  298 => 180,  289 => 179,  150 => 49,  145 => 48,  136 => 47,  116 => 35,  108 => 25,  103 => 23,  99 => 21,  93 => 19,  90 => 18,  84 => 16,  82 => 15,  72 => 7,  63 => 6,  52 => 3,  43 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -405,17 +432,31 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
     <div class=\"card card-container\">
         <img id=\"profile-img\" class=\"profile-img-card\" src=\"//ssl.gstatic.com/accounts/ui/avatar_2x.png\" />
         <p id=\"profile-name\" class=\"profile-name-card\"></p>
-        <form class=\"form-signin\">
-            <span id=\"reauth-email\" class=\"reauth-email\"></span>
-            <input type=\"text\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Usuario\" required autofocus>
-            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Contraseña\" required>
-            <div id=\"remember\" class=\"checkbox\">
-                <label>
-                    <input type=\"checkbox\" value=\"remember-me\"> Recordar
-                </label>
-            </div>
-            <a href=\"{{ path(\"index_user\") }}\"><button class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"button\">Iniciar Sesión</button></a>
-        </form><!-- /form -->
+
+        {% if is_granted ('ROLE_USER') %}
+            {{ dump(app.user) }}
+        {% endif %}
+        {% if last_username is defined %}
+            {{ last_username }}
+        {% endif %}
+
+
+        <form action=\"{{ path('login_check') }}\" method=\"post\" class=\"form-signin\">
+
+            <input type=\"text\" id=\"username\" name=\"_username\"  value=\"{{ last_username }}\" class=\"form-control\" placeholder=\"Usuario\" required autofocus/>
+
+
+            <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required/>
+
+            {#
+            Si quieres controlar la url a la que el usuario
+            es redirigido al enviar correctamente el formulario
+            <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+            #}
+
+            <input type=\"hidden\" name=\"_target_path\" value=\"/index_user\" />
+            <input class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"submit\" value=\"Iniciar Sesión\" />
+        </form>
         <a href=\"#\" class=\"forgot-password\">
             ¿Olvidó la contraseña?
         </a>
@@ -643,6 +684,6 @@ class __TwigTemplate_c4667c03615c2e462b7bda2d57f6320844d2bcda31834eb0e82b885fb6d
     }
 </script>
 {% endblock %}
-", "user/loginUser.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\user\\loginUser.html.twig");
+", "user/loginUser.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\user\\loginUser.html.twig");
     }
 }

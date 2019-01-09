@@ -575,6 +575,6 @@ class __TwigTemplate_3f3a72acd922208529921bbdabe9acb6023da35de57bdec195705330c0a
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "puesto/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\puesto\\index.html.twig");
+", "puesto/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\puesto\\index.html.twig");
     }
 }

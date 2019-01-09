@@ -330,6 +330,6 @@ class __TwigTemplate_10c6155d8461b97bc1d4b5c873f742b8507e28e93737a0baa5e98ef1e82
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "adminxdep/tramitesAdminxdep.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\adminxdep\\tramitesAdminxdep.html.twig");
+", "adminxdep/tramitesAdminxdep.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\adminxdep\\tramitesAdminxdep.html.twig");
     }
 }

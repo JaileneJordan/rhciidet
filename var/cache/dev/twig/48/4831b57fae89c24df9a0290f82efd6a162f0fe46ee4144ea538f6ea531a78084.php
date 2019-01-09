@@ -1146,6 +1146,6 @@ class __TwigTemplate_3b1dda448e955d9aa7b87f0946b7b404302000611072e133070d60f7d1c
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "ausencia/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\ausencia\\index.html.twig");
+", "ausencia/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\ausencia\\index.html.twig");
     }
 }

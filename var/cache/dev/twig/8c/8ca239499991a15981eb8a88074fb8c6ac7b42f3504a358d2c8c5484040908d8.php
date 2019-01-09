@@ -302,7 +302,7 @@ class __TwigTemplate_27a308733ab8c113506a5a49b85784646af7e2f69bbe6d87734fc8b997e
             echo "</a></td>
                                     <td>";
             // line 191
-            echo twig_escape_filter($this->env, $this->getAttribute($context["statusEdu"], "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["statusEdu"], "nombreSe", array()), "html", null, true);
             echo "</td>
                                     <td>";
             // line 192
@@ -555,7 +555,7 @@ class __TwigTemplate_27a308733ab8c113506a5a49b85784646af7e2f69bbe6d87734fc8b997e
                             {% for statusEdu in statusEdus %}
                                 <tr>
                                     <td><a href=\"{{ path('statusedu_show', { 'id': statusEdu.id }) }}\">{{ statusEdu.id }}</a></td>
-                                    <td>{{ statusEdu.nombre }}</td>
+                                    <td>{{ statusEdu.nombreSe }}</td>
                                     <td>{{ statusEdu.activo }}</td>
                                     <td><center><a href=\"{{ path('statusedu_edit', { 'id': statusEdu.id }) }}\" class=\"btn btn-dark\">Editar</a></center></td>
                                 </tr>
@@ -575,6 +575,6 @@ class __TwigTemplate_27a308733ab8c113506a5a49b85784646af7e2f69bbe6d87734fc8b997e
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "statusedu/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\statusedu\\index.html.twig");
+", "statusedu/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\statusedu\\index.html.twig");
     }
 }

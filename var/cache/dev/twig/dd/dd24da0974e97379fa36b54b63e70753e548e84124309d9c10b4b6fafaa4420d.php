@@ -81,44 +81,32 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
 
         ";
         // line 17
-        if ((isset($context["errors"]) || array_key_exists("errors", $context))) {
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
             // line 18
-            echo "          <div class=\"alert alert-danger\">
-            ";
-            // line 19
-            echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? $this->getContext($context, "error")), "messageKey", array()), "html", null, true);
+            echo "            ";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, $this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()));
             echo "
-          </div>
         ";
         }
-        // line 22
-        echo "
+        // line 20
+        echo "        ";
+        if ((isset($context["last_username"]) || array_key_exists("last_username", $context))) {
+            // line 21
+            echo "            ";
+            echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
+            echo "
         ";
+        }
         // line 23
-        if (($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER") || $this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN"))) {
-            // line 24
-            echo "
-          ";
-            // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "nombre", array()), "html", null, true);
-            echo " ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "aPaterno", array()), "html", null, true);
-            echo "  ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "idAcceso", array()), "html", null, true);
-            echo "
-
-        ";
-        }
-        // line 28
         echo "
 
         <form action=\"";
-        // line 30
+        // line 25
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("login_check");
         echo "\" method=\"post\" class=\"form-signin\">
 
             <input type=\"text\" id=\"username\" name=\"_username\"  value=\"";
-        // line 32
+        // line 27
         echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
         echo "\" class=\"form-control\" placeholder=\"Usuario\" required autofocus/>
 
@@ -126,9 +114,9 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
             <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required/>
 
             ";
-        // line 42
+        // line 37
         echo "
-            <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+            <input type=\"hidden\" name=\"_target_path\" value=\"/index_user\" />
             <input class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"submit\" value=\"Iniciar Sesión\" />
         </form>
 
@@ -152,7 +140,7 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
 
     }
 
-    // line 60
+    // line 55
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -161,12 +149,12 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 61
+        // line 56
         echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("../vendors/bootstrap/dist/css/bootstrap.min.css"), "html", null, true);
         echo "\" type=\"text/css\" />
 <link href=\"";
-        // line 62
+        // line 57
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" id=\"bootstrap-css\"/>
 <style>
@@ -305,7 +293,7 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
 
     }
 
-    // line 192
+    // line 187
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -314,12 +302,12 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 193
+        // line 188
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 194
+        // line 189
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("//code.jquery.com/jquery-1.11.1.min.js"), "html", null, true);
         echo "\"></script>
 <script>
@@ -426,7 +414,7 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
 
     public function getDebugInfo()
     {
-        return array (  323 => 194,  318 => 193,  309 => 192,  170 => 62,  165 => 61,  156 => 60,  130 => 42,  122 => 32,  117 => 30,  113 => 28,  103 => 25,  100 => 24,  98 => 23,  95 => 22,  89 => 19,  86 => 18,  84 => 17,  72 => 7,  63 => 6,  52 => 3,  43 => 2,  11 => 1,);
+        return array (  311 => 189,  306 => 188,  297 => 187,  158 => 57,  153 => 56,  144 => 55,  118 => 37,  110 => 27,  105 => 25,  101 => 23,  95 => 21,  92 => 20,  86 => 18,  84 => 17,  72 => 7,  63 => 6,  52 => 3,  43 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -455,16 +443,11 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
         <img id=\"profile-img\" class=\"profile-img-card\" src=\"//ssl.gstatic.com/accounts/ui/avatar_2x.png\" />
         <p id=\"profile-name\" class=\"profile-name-card\"></p>
 
-        {% if errors is defined %}
-          <div class=\"alert alert-danger\">
-            {{ error.messageKey }}
-          </div>
+        {% if is_granted ('ROLE_USER') %}
+            {{ dump(app.user) }}
         {% endif %}
-
-        {% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
-
-          {{app.user.nombre}} {{app.user.aPaterno}}  {{ app.user.idAcceso }}
-
+        {% if last_username is defined %}
+            {{ last_username }}
         {% endif %}
 
 
@@ -481,7 +464,7 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
             <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
             #}
 
-            <input type=\"hidden\" name=\"_target_path\" value=\"/index\" />
+            <input type=\"hidden\" name=\"_target_path\" value=\"/index_user\" />
             <input class=\"btn btn-lg btn-primary btn-block btn-signin\" type=\"submit\" value=\"Iniciar Sesión\" />
         </form>
 
@@ -717,6 +700,6 @@ class __TwigTemplate_bb0da8a7fa5308a037edf41b7f8a97cf6f592ae3c4740b44514a12cb9b6
     }
 </script>
 {% endblock %}
-", "admin/loginAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\admin\\loginAdmin.html.twig");
+", "admin/loginAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\admin\\loginAdmin.html.twig");
     }
 }

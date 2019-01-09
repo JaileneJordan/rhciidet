@@ -186,6 +186,6 @@ class __TwigTemplate_5c18aba809c5707dcde131e638abe4286bbcb22617324b940e5ec730c48
   </div>
   {% endblock %}
 {% endblock %}
-", "categoria/edit.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\categoria\\edit.html.twig");
+", "categoria/edit.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\categoria\\edit.html.twig");
     }
 }

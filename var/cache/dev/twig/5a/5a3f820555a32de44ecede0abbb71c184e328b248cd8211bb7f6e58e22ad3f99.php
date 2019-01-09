@@ -503,6 +503,6 @@ class __TwigTemplate_c226a1d57ea66484123aa51c9e858c788b7ed49d6915d567ceaa4fa3292
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "user/perfilUser.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\user\\perfilUser.html.twig");
+", "user/perfilUser.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\user\\perfilUser.html.twig");
     }
 }

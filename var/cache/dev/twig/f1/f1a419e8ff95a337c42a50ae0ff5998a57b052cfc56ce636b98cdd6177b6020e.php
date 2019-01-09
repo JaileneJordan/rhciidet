@@ -623,6 +623,6 @@ class __TwigTemplate_1ffc8c75ce9e602abe93c5ece5976c20450e3c63749664a5ae26bd264f1
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "categoria/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\categoria\\index.html.twig");
+", "categoria/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\categoria\\index.html.twig");
     }
 }

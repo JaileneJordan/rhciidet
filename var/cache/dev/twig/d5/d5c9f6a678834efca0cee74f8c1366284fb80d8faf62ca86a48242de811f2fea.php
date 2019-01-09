@@ -304,7 +304,7 @@ class __TwigTemplate_803f8578c065d6de35dd2875acda8553b9c7f1edfdd6b42eb373adb38fc
             echo "</a></td>
                                     <td>";
             // line 193
-            echo twig_escape_filter($this->env, $this->getAttribute($context["docsOficiale"], "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["docsOficiale"], "nombreDoc", array()), "html", null, true);
             echo "</td>
                                     <td>";
             // line 194
@@ -559,7 +559,7 @@ class __TwigTemplate_803f8578c065d6de35dd2875acda8553b9c7f1edfdd6b42eb373adb38fc
                             {% for docsOficiale in docsOficiales %}
                                 <tr>
                                     <td><a href=\"{{ path('docsoficiales_show', { 'id': docsOficiale.id }) }}\">{{ docsOficiale.id }}</a></td>
-                                    <td>{{ docsOficiale.nombre }}</td>
+                                    <td>{{ docsOficiale.nombreDoc }}</td>
                                     <td>{{ docsOficiale.activo }}</td>
                                     <td><center><a href=\"{{ path('docsoficiales_edit', { 'id': docsOficiale.id }) }}\" class=\"btn btn-dark\">Editar</a></center></td>
                                 </tr>
@@ -579,6 +579,6 @@ class __TwigTemplate_803f8578c065d6de35dd2875acda8553b9c7f1edfdd6b42eb373adb38fc
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "docsoficiales/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\docsoficiales\\index.html.twig");
+", "docsoficiales/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\docsoficiales\\index.html.twig");
     }
 }

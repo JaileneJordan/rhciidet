@@ -361,7 +361,7 @@ class __TwigTemplate_1ce5a14630f3187a61e26fc89edc3a795041961cb1f3b1ffc8106dfeb50
             echo "</a></td>
                                   <td>";
             // line 247
-            echo twig_escape_filter($this->env, $this->getAttribute($context["licencium"], "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["licencium"], "nombreLic", array()), "html", null, true);
             echo "</td>
                                   <td>";
             // line 248
@@ -669,7 +669,7 @@ class __TwigTemplate_1ce5a14630f3187a61e26fc89edc3a795041961cb1f3b1ffc8106dfeb50
                           {% for licencium in licencias %}
                               <tr>
                                   <td><a href=\"{{ path('licencia_show', { 'id': licencium.id }) }}\">{{ licencium.id }}</a></td>
-                                  <td>{{ licencium.nombre }}</td>
+                                  <td>{{ licencium.nombreLic }}</td>
                                   <td>{{ licencium.activo }}</td>
                                   <td><center><a href=\"{{ path('licencia_edit', { 'id': licencium.id }) }}\" class=\"btn btn-dark\">Editar</a></center></td>
                               </tr>
@@ -688,6 +688,6 @@ class __TwigTemplate_1ce5a14630f3187a61e26fc89edc3a795041961cb1f3b1ffc8106dfeb50
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "licencia/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\licencia\\index.html.twig");
+", "licencia/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\licencia\\index.html.twig");
     }
 }

@@ -380,7 +380,7 @@ class __TwigTemplate_77c6076f21c2cc282bf1604957eb12d48f83032eb529a29c5b5341f423b
             echo "</a></td>
                                   <td>";
             // line 269
-            echo twig_escape_filter($this->env, $this->getAttribute($context["departamento"], "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["departamento"], "nombreDep", array()), "html", null, true);
             echo "</td>
                                   <td>";
             // line 270
@@ -715,7 +715,7 @@ class __TwigTemplate_77c6076f21c2cc282bf1604957eb12d48f83032eb529a29c5b5341f423b
                           {% for departamento in departamentos %}
                               <tr>
                                   <td><a href=\"{{ path('departamento_show', { 'id': departamento.id }) }}\">{{ departamento.id }}</a></td>
-                                  <td>{{ departamento.nombre }}</td>
+                                  <td>{{ departamento.nombreDep }}</td>
                                   <td>{{ departamento.jefe }}</td>
                                   <td>{{ departamento.idSubdireccion }}</td>
                                   <td><center><a href=\"{{ path('departamento_edit', { 'id': departamento.id }) }}\" class=\"btn btn-dark\">Editar</a></center></td>
@@ -736,6 +736,6 @@ class __TwigTemplate_77c6076f21c2cc282bf1604957eb12d48f83032eb529a29c5b5341f423b
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "departamento/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\departamento\\index.html.twig");
+", "departamento/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\departamento\\index.html.twig");
     }
 }

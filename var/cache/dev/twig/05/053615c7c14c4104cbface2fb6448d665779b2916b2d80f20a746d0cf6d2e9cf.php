@@ -1385,6 +1385,6 @@ final plantilla predefinida-->
   {% endblock %}
   <!-- /page content -->
 {% endblock %}
-", "empleado/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\empleado\\index.html.twig");
+", "empleado/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\empleado\\index.html.twig");
     }
 }

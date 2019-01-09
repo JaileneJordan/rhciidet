@@ -169,6 +169,6 @@ class __TwigTemplate_1257b503f1fdcb84e5e64a7a4b0ad74a39939030991d5f61890b5045a18
         </li>
     </ul>
 {% endblock %}
-", "statusedu/show.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\statusedu\\show.html.twig");
+", "statusedu/show.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\statusedu\\show.html.twig");
     }
 }

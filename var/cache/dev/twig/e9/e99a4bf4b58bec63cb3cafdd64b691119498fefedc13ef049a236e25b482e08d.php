@@ -273,6 +273,6 @@ class __TwigTemplate_f139480a7d69d83085a4e436922deea5c70721d44a5e4cea5f46235728c
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "admin/accesoAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\admin\\accesoAdmin.html.twig");
+", "admin/accesoAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\admin\\accesoAdmin.html.twig");
     }
 }

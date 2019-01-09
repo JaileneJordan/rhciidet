@@ -120,6 +120,6 @@ class __TwigTemplate_d4f39281b80848dd63ea0ef43911bd8f4863439e44c3ed1bd075ae82b39
         </li>
     </ul>
 {% endblock %}
-", "registrotramite/new.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\registrotramite\\new.html.twig");
+", "registrotramite/new.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\registrotramite\\new.html.twig");
     }
 }

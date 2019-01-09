@@ -169,6 +169,6 @@ class __TwigTemplate_9ccf9feac66c8e1c8436aaab7177aaa33f61eb7c01463accaf9c939b63b
         </li>
     </ul>
 {% endblock %}
-", "niveledu/show.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\niveledu\\show.html.twig");
+", "niveledu/show.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\niveledu\\show.html.twig");
     }
 }

@@ -169,6 +169,6 @@ class __TwigTemplate_f28fb45101c78f79317a96b06a4629d0b81aadfa4b323940dceb5b02034
         </li>
     </ul>
 {% endblock %}
-", "departamento/show.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\departamento\\show.html.twig");
+", "departamento/show.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\departamento\\show.html.twig");
     }
 }

@@ -2177,6 +2177,6 @@ class __TwigTemplate_8eca023b9bbd3f7f76d0bfae4ce9335a0261c833963e2b5073f5a30f7e8
 {% endblock %}
 
 {% endblock %}
-", "admin/perfilAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\admin\\perfilAdmin.html.twig");
+", "admin/perfilAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\admin\\perfilAdmin.html.twig");
     }
 }

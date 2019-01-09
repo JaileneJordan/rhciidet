@@ -172,6 +172,6 @@ class __TwigTemplate_3e0c7232d9b80753257f9167a6abf4d33b0b980c8ea39b11cf81a836ab0
   </div>
   {% endblock %}
 {% endblock %}
-", "puesto/new.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\puesto\\new.html.twig");
+", "puesto/new.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\puesto\\new.html.twig");
     }
 }

@@ -329,6 +329,6 @@ class __TwigTemplate_34219ffbbdc8c84fc20a068b14c18ef7a40f08125d1cdf22318cb4d9982
 {% block javascripts %}
 
 {% endblock %}
-", "index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\index.html.twig");
+", "index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\index.html.twig");
     }
 }

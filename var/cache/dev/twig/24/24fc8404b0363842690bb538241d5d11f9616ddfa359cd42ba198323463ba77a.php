@@ -216,6 +216,6 @@ class __TwigTemplate_fac1f3a0647d08478f3bb527436de96b8eb4e53f277c39a554ffa417e67
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "admin/indexAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\admin\\indexAdmin.html.twig");
+", "admin/indexAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\admin\\indexAdmin.html.twig");
     }
 }

@@ -1770,6 +1770,6 @@ class __TwigTemplate_4b76182cd51e1a154ce5e32332a6c7983a6342b29261df38ad3dcb9139c
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "user/horarioUser.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\user\\horarioUser.html.twig");
+", "user/horarioUser.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\user\\horarioUser.html.twig");
     }
 }

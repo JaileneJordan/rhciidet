@@ -180,6 +180,6 @@ class __TwigTemplate_c09eadbaff0b765e87068e2b89db8bbed6ca66220c728103b9c1af58b9f
         </li>
     </ul>
 {% endblock %}
-", "categoria/show.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\categoria\\show.html.twig");
+", "categoria/show.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\categoria\\show.html.twig");
     }
 }

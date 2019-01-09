@@ -172,6 +172,6 @@ class __TwigTemplate_5851202399d3a20cbed9075462f06db92a40b8f82100a98237397ae19b5
   </div>
   {% endblock %}
 {% endblock %}
-", "categoria/new.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\categoria\\new.html.twig");
+", "categoria/new.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\categoria\\new.html.twig");
     }
 }

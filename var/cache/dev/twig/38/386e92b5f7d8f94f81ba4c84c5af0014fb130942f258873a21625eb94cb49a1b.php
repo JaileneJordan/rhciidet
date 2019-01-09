@@ -120,6 +120,6 @@ class __TwigTemplate_658fb05881d4ea81b127c7ef5a3814693850b0c47a64684ca1316a24508
         </li>
     </ul>
 {% endblock %}
-", "horario/new.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\horario\\new.html.twig");
+", "horario/new.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\horario\\new.html.twig");
     }
 }

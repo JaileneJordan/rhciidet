@@ -316,6 +316,6 @@ class __TwigTemplate_9fd2c75c847a8e4f2eea28d62c8c8e2c65cda4daad0404c7d1f7e363e3c
   </div>
   {% endblock %}
 {% endblock %}
-", "escolaridad/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\escolaridad\\index.html.twig");
+", "escolaridad/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\escolaridad\\index.html.twig");
     }
 }

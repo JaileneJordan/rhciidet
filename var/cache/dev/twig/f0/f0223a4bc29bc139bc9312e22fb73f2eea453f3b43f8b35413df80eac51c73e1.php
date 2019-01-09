@@ -302,7 +302,7 @@ class __TwigTemplate_8bc70466095b5a8f80edb481a718aac2b39314fe13d04de4ae864c3615b
             echo "</a></td>
                                     <td>";
             // line 191
-            echo twig_escape_filter($this->env, $this->getAttribute($context["nivelEdu"], "nombre", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["nivelEdu"], "nombreNe", array()), "html", null, true);
             echo "</td>
                                     <td>";
             // line 192
@@ -555,7 +555,7 @@ class __TwigTemplate_8bc70466095b5a8f80edb481a718aac2b39314fe13d04de4ae864c3615b
                             {% for nivelEdu in nivelEdus %}
                                 <tr>
                                     <td><a href=\"{{ path('niveledu_show', { 'id': nivelEdu.id }) }}\">{{ nivelEdu.id }}</a></td>
-                                    <td>{{ nivelEdu.nombre }}</td>
+                                    <td>{{ nivelEdu.nombreNe }}</td>
                                     <td>{{ nivelEdu.activo }}</td>
                                     <td><center><a href=\"{{ path('niveledu_edit', { 'id': nivelEdu.id }) }}\" class=\"btn btn-dark\">Editar</a></center></td>
                                 </tr>
@@ -575,6 +575,6 @@ class __TwigTemplate_8bc70466095b5a8f80edb481a718aac2b39314fe13d04de4ae864c3615b
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "niveledu/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\niveledu\\index.html.twig");
+", "niveledu/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\niveledu\\index.html.twig");
     }
 }

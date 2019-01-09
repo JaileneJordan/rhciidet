@@ -625,6 +625,6 @@ class __TwigTemplate_2caec7adbe82d2292438e62ca6c73ac7a3593920cf652c1f3862c7a3701
 {% endblock %}
 <!-- /page content -->
 {% endblock %}
-", "semestre/index.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\semestre\\index.html.twig");
+", "semestre/index.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\semestre\\index.html.twig");
     }
 }

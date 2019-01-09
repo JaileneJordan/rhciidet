@@ -808,6 +808,6 @@ class __TwigTemplate_7475eea2b39bcb1751c765b607dc9bef63d4eb291231255e1307621866a
   <script src=\"{{ asset ('/build/js/custom.min.js') }}\"></script>
   {% endblock %}
 </html>
-", "baseAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet_success\\app\\Resources\\views\\baseAdmin.html.twig");
+", "baseAdmin.html.twig", "C:\\xampp\\htdocs\\rhciidet\\app\\Resources\\views\\baseAdmin.html.twig");
     }
 }
